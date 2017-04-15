@@ -2,9 +2,7 @@
 margin: 0;
 padding: 0;
 //border: 1px solid green;
-font-family: 'Roboto', sans-serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Hammersmith One', sans-serif;
+box-sizing: border-box;
 }
 
 $green-color: rgb(0, 224, 208);
@@ -20,7 +18,34 @@ $hammersmith-font: 'Hammersmith One', sans-serif;
   border-radius: 1px;
   color: $green-color;
   text-transform: uppercase;
-  font-size: 13px;
+  font: 16px $hammersmith-font;
+}
+
+@mixin separator {
+  width: 50px;
+  height: 0.5px;
+  margin-top: 15px;
+}
+
+@mixin segment_style {
+  width: 33%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    margin-top: 40px;
+  }
+  span {
+    font: 900 14px $roboto-font;
+    text-transform: uppercase;
+    padding-top: 25px;
+  }
+  p {
+    font: 300 14px $roboto-font;
+    padding: 20px 27px 0 27px;
+    line-height: 1.5;
+  }
 }
 
 .wrapper {
@@ -32,6 +57,7 @@ header {
   height: 670px;
   width: 100%;
   background-image: url(../images/background.png);
+
   .logo {
     background-image: url(../images/logo.png);
     background-repeat: no-repeat;
@@ -54,40 +80,39 @@ header {
   }
 }
 
-header h1 {
-  display: inline-block;
+.content_center {
   width: 100%;
-  text-align: center;
-  color: white;
-  text-transform: capitalize;
-  margin-top: 150px;
-  font-family: $playfair-font;
-  font-size: 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    margin-top: 150px;
+    font-family: $playfair-font;
+    font-size: 32px;
+  }
+  .separator {
+    @include separator;
+    background-color: $green-color;
+  }
+  p {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 2;
+    font-family: $roboto-font;
+    font-size: 14px;
+  }
+  .button {
+    @include btn;
+    margin-top: 40px;
+  }
 }
-
-
-.separator {
-  width: 50px;
-  height: 1px;
-  background-color: $green-color;
-  margin: 20px 0 0 445px;
-}
-
-header p {
-  color: white;
-  text-align: center;
-  margin-top: 35px;
-  line-height: 2;
-  font-family: $roboto-font;
-  font-size: 14px;
-}
-
-.headerBtn {
-  @include btn;
-  margin: 20px 0 0 410px;
-}
-
-
 
 .logo_left {
   width: 235px;
@@ -112,14 +137,14 @@ header p {
     line-height: 1.5;
     padding-top: 15px;
   }
-  .storyBtn {
+  .button {
     @include btn;
     margin-top: 20px;
   }
 }
 
 .video {
-  height: 550px;
+  height: 450px;
   width: 100%;
   background-image: url(../images/video_img.png);
   display: inline-block;
@@ -150,4 +175,113 @@ header p {
     text-transform: uppercase;
     padding-top: 15px;
   }
+}
+
+.expertise {
+  height: 755px;
+  h2 {
+    text-align: center;
+    padding-top: 50px;
+    font: bold 22px $playfair-font;
+    text-transform: uppercase;
+  }
+  p {
+    text-align: center;
+    font: 14px $playfair-font;
+    padding-top: 5px;
+  }
+  .separator {
+    @include separator;
+    background-color: rgba(65, 61, 75, 0.3);
+    margin-left: 445px;
+  }
+}
+
+.mosaic {
+  margin-top: 50px;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  .segment_1 {
+    @include segment_style;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+  }
+  .segment_2 {
+    @include segment_style;
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+  }
+  .segment_3 {
+    @include segment_style;
+    border-bottom: 1px solid lightgrey;
+  }
+  .segment_4 {
+    @include segment_style;
+    border-right: 1px solid lightgrey;
+  }
+  .segment_5 {
+    @include segment_style;
+    border-right: 1px solid lightgrey;
+  }
+  .segment_6 {
+    @include segment_style;
+  }
+}
+
+.team {
+  height: 712px;
+  background-image: url(../images/team_background.png);
+  span {
+    font: bold 22px $playfair-font;
+    text-transform: uppercase;
+    color: white;
+    padding-top: 50px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+  p {
+    font: 400 14px $playfair-font;
+    color: rgba(250, 250, 250, 0.7);
+    padding-top: 5px;
+    text-align: center;
+
+  }
+  .separator {
+    @include separator;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-left: 445px;
+  }
+}
+
+.team_photos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  .member {
+    width: 220px;
+    height: 300px;
+    border: 1px solid rgba(231, 231, 231, 0.5);
+  }
+  span {
+    padding: 0;
+    margin-top: 10px;
+    font: 900 14px $roboto-font;
+  }
+  p {
+    font: 300 13px $roboto-font;
+    color: rgba(250, 250, 250, 0.7);
+    text-transform: uppercase;
+  }
+}
+
+#another_par {
+  margin-top: 80px;
+  font: 300 14px $roboto-font;
+}
+.button {
+  @include btn;
+  width: 150px;
+  // margin: 30px 0 0 400px;
 }

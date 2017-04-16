@@ -108,7 +108,7 @@ header {
     font-family: $roboto-font;
     font-size: 14px;
   }
-  .button {
+  .button_1 {
     @include btn;
     margin-top: 40px;
   }
@@ -137,14 +137,14 @@ header {
     line-height: 1.5;
     padding-top: 15px;
   }
-  .button {
+  .button_2 {
     @include btn;
     margin-top: 20px;
   }
 }
 
 .video {
-  height: 450px;
+  height: 550px;
   width: 100%;
   background-image: url(../images/video_img.png);
   display: inline-block;
@@ -232,6 +232,7 @@ header {
 .team {
   height: 712px;
   background-image: url(../images/team_background.png);
+  background-position: center;
   span {
     font: bold 22px $playfair-font;
     text-transform: uppercase;
@@ -280,8 +281,58 @@ header {
   margin-top: 80px;
   font: 300 14px $roboto-font;
 }
-.button {
+.button_3 {
   @include btn;
   width: 150px;
-  // margin: 30px 0 0 400px;
+  margin: 30px 0 0 400px;
+}
+
+.portfolio {
+  display: inline-block;
+  padding-left: 150px;
+  p {
+    float: left;
+    text-transform: uppercase;
+    margin: 50px 0 50px 0;
+    font: 700 22px $playfair-font;
+    color:  rgba(65, 61, 75, 0.5);
+  }
+  span {
+    display: inline-block;
+    float: right;
+    margin: 50px 0 50px 0;
+    font: 300 14px $roboto-font;
+    color:  rgba(65, 61, 75, 0.5);
+  }
+}
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  .sample {
+    height: 160px;
+    width: 16.66%;
+    border: 1px solid grey;
+  }
+  .button_4 {
+    @include btn;
+    width: 120px;
+    margin: 70px 0 70px 565px;
+  }
+}
+
+.feedbacks {
+  height: 500px;
+  background-image: url(../images/feedback_background.png);
+  background-position: center;
+}
+
+.contact {
+  height: 654px;
+}
+
+footer {
+  height: 400px;
+  background-image: url(../images/footer_background.png);
+  background-position: center;
 }

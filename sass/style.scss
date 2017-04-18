@@ -28,11 +28,17 @@ $hammersmith-font: 'Hammersmith One', sans-serif;
 }
 
 @mixin segment_style {
-  width: 33%;
+  width: 33.33%;
   height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 1s;
+  background-color: white;
+  &:hover {
+    transform: scale(1.025);
+    box-shadow: 5px 5px 5px 5px #888888;
+  }
   img {
     margin-top: 40px;
   }
@@ -54,9 +60,10 @@ $hammersmith-font: 'Hammersmith One', sans-serif;
 }
 
 header {
-  height: 670px;
+  height: 100vh;
   width: 100%;
   background-image: url(../images/background.png);
+  background-size: cover;
 
   .logo {
     background-image: url(../images/logo.png);
@@ -178,10 +185,10 @@ header {
 }
 
 .expertise {
-  height: 755px;
+  height: 100vh;
   h2 {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 30px;
     font: bold 22px $playfair-font;
     text-transform: uppercase;
   }
@@ -230,7 +237,7 @@ header {
 }
 
 .team {
-  height: 712px;
+  height: 100vh;
   background-image: url(../images/team_background.png);
   background-position: center;
   span {
@@ -278,7 +285,7 @@ header {
 }
 
 #another_par {
-  margin-top: 80px;
+  margin-top: 60px;
   font: 300 14px $roboto-font;
 }
 .button_3 {
@@ -288,8 +295,7 @@ header {
 }
 
 .portfolio {
-  display: inline-block;
-  padding-left: 150px;
+  display: flex;
   p {
     float: left;
     text-transform: uppercase;
@@ -317,7 +323,7 @@ header {
   .button_4 {
     @include btn;
     width: 120px;
-    margin: 70px 0 70px 565px;
+    margin: 70px 0 70px 560px;
   }
 }
 
@@ -325,14 +331,166 @@ header {
   height: 500px;
   background-image: url(../images/feedback_background.png);
   background-position: center;
+  span {
+    font: 400 100px $playfair-font;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  p {
+    font: 400 16px $playfair-font;
+    text-align: center;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.85);
+  }
 }
 
 .contact {
   height: 654px;
+  p {
+    width: 50%;
+    font: 700 22px $playfair-font;
+    text-transform: uppercase;
+    margin-top: 50px;
+    color: rgb(65, 61, 75);
+  }
 }
 
 footer {
   height: 400px;
   background-image: url(../images/footer_background.png);
   background-position: center;
+}
+
+form {
+  display: inline-block;
+  width: 50%;
+  margin-top: 30px;
+  input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid lightgrey;
+    padding-left: 10px;
+    font: 300 14px $roboto-font;
+    outline: none;
+    &:focus {
+      background-color: rgba(243, 243, 243, .5);
+    }
+  }
+  textarea {
+    resize: none;
+    width: 100%;
+    height: 280px;
+    border: 1px solid lightgrey;
+    padding: 10px 0 0 10px;
+    font: 300 14px $roboto-font;
+    outline: none;
+    &:focus {
+      background-color: rgba(243, 243, 243, .5);
+    }
+  }
+  button {
+    @include btn;
+  }
+}
+
+footer {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .footer_first_col {
+    width: 30%;
+    height: 250px;
+  }
+  .footer_second_col {
+    width: 30%;
+    height: 250px;
+  }
+  .footer_third_col {
+    width: 30%;
+    height: 250px;
+  }
+  .footer_menu {
+    width: 100%;
+    height: 150px;
+    display: inline-block;
+  }
+}
+
+.footer_first_col {
+  .logo {
+    width: 128px;
+    height: 50px;
+    background-image: url(../images/logo.png);
+    margin-top: 60px;
+  }
+  p {
+    font: 300 14px $roboto-font;
+    color: white;
+    line-height: 24px;
+    margin-top: 15px;
+    padding-left: 10px;
+  }
+}
+
+.footer_second_col {
+  p {
+    font: 900 15px $roboto-font;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 85px;
+  }
+}
+
+.footer_third_col {
+  p {
+    font: 900 15px $roboto-font;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 85px;
+  }
+  input {
+    display: inline-block;
+    float: left;
+    margin-top: 30px;
+    padding-left: 10px;
+    height: 40px;
+    width: 70%;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font: 300 14px $roboto-font;
+    color: rgba(255, 255, 255, 0.75);
+    outline: none;
+    &:focus {
+      background-color: rgba(243, 243, 243, .5);
+    }
+  }
+  button {
+    display: inline-block;
+    float: right;
+    width: 70px;
+    height: 40px;
+    margin-top: 30px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: url(../images/paper.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+
+.footer_menu {
+  color: white;
+  padding-top: 65px;
+  li {
+    float: left;
+    list-style: none;
+    padding-left: 30px;
+    text-transform: uppercase;
+    font: 400 14px $roboto-font;
+  }
 }

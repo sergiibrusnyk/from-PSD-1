@@ -19,6 +19,9 @@ $hammersmith-font: 'Hammersmith One', sans-serif;
   color: $green-color;
   text-transform: uppercase;
   font: 16px $hammersmith-font;
+  &:focus {
+    outline: 0;
+  }
 }
 
 @mixin separator {
@@ -443,6 +446,21 @@ footer {
     text-transform: uppercase;
     margin-top: 85px;
   }
+  img {
+    display: inline-block;
+    float: left;
+    margin-top: 15px;
+  }
+  span {
+    display: inline-block;
+    width: 90%;
+    float: left;
+    margin-top: 15px;
+    padding-left: 15px;
+    font: 300 14px $roboto-font;
+    color: white;
+    line-height: 26px;
+  }
 }
 
 .footer_third_col {
@@ -479,6 +497,13 @@ footer {
     background-image: url(../images/paper.png);
     background-repeat: no-repeat;
     background-position: center;
+    &:focus {
+      outline: 0;
+    }
+  }
+  .social_media {
+    display: inline-block;
+    margin-top: 25px;
   }
 }
 
@@ -488,9 +513,13 @@ footer {
   padding-top: 65px;
   li {
     float: left;
-    list-style: none;
     padding-left: 30px;
+    list-style: none;
     text-transform: uppercase;
+    font: 400 14px $roboto-font;
+  }
+  p {
+    float: right;
     font: 400 14px $roboto-font;
   }
 }

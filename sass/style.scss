@@ -1,9 +1,11 @@
 * {
 margin: 0;
 padding: 0;
-//border: 1px solid green;
+border: 1px solid green;
 box-sizing: border-box;
 }
+
+
 
 $green-color: rgb(0, 224, 208);
 $roboto-font: 'Roboto', sans-serif;
@@ -36,12 +38,6 @@ $hammersmith-font: 'Hammersmith One', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 1s;
-  background-color: white;
-  &:hover {
-    transform: scale(1.025);
-    box-shadow: 5px 5px 5px 5px #888888;
-  }
   img {
     margin-top: 40px;
   }
@@ -55,6 +51,15 @@ $hammersmith-font: 'Hammersmith One', sans-serif;
     padding: 20px 27px 0 27px;
     line-height: 1.5;
   }
+}
+
+@mixin client {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 160px;
+  height: 80px;
+  float: left;
+  margin: 0 0 10px 50px;
 }
 
 .wrapper {
@@ -183,12 +188,12 @@ header {
     font: 900 16px $roboto-font;
     color: white;
     text-transform: uppercase;
-    padding-top: 15px;
+    margin-top: 30px;
   }
 }
 
 .expertise {
-  height: 100vh;
+  height: 755px;
   h2 {
     text-align: center;
     padding-top: 30px;
@@ -290,7 +295,7 @@ header {
 #another_par {
   margin-top: 60px;
   font: 300 14px $roboto-font;
-}
+} //dopracować
 .button_3 {
   @include btn;
   width: 150px;
@@ -325,8 +330,8 @@ header {
   }
   .button_4 {
     @include btn;
-    width: 120px;
-    margin: 70px 0 70px 560px;
+    width: 150px;
+    margin: 50px 0 50px 545px;
   }
 }
 
@@ -351,25 +356,19 @@ header {
 
 .contact {
   height: 654px;
-  p {
-    width: 50%;
-    font: 700 22px $playfair-font;
-    text-transform: uppercase;
-    margin-top: 50px;
-    color: rgb(65, 61, 75);
-  }
-}
-
-footer {
-  height: 400px;
-  background-image: url(../images/footer_background.png);
-  background-position: center;
 }
 
 form {
   display: inline-block;
   width: 50%;
   margin-top: 30px;
+  float: left;
+  p {
+    font: 700 22px $playfair-font;
+    text-transform: uppercase;
+    color: rgb(65, 61, 75);
+    padding-bottom: 30px;
+  }
   input {
     width: 100%;
     height: 40px;
@@ -398,7 +397,64 @@ form {
   }
 }
 
+.clients {
+  width: 50%;
+  height: 610px;
+  float: left;
+  p {
+    font: 700 22px $playfair-font;
+    text-transform: uppercase;
+    color: rgb(65, 61, 75);
+    margin-top: 30px;
+    padding: 0 0 30px 50px;
+  }
+  .client1{
+    @include client;
+    background-image: url(../images/zara.png);
+  }
+  .client2{
+    @include client;
+    background-image: url(../images/mango.png);
+  }
+  .client3{
+    @include client;
+    background-image: url(../images/barneys_new_york.png);
+  }
+  .client4{
+    @include client;
+    background-image: url(../images/gucci.png);
+  }
+  .client5{
+    @include client;
+    background-image: url(../images/puma.png);
+  }
+  .client6{
+    @include client;
+    background-image: url(../images/levis.png);
+  }
+  .client7{
+    @include client;
+    background-image: url(../images/converse.png);
+  }
+  .client8{
+    @include client;
+    background-image: url(../images/billabong.png);
+  }
+  .client9{
+    @include client;
+    background-image: url(../images/nike.png);
+  }
+  .client10{
+    @include client;
+    background-image: url(../images/calvin_klein.png);
+  }
+}
+
+
 footer {
+  height: 400px;
+  background-image: url(../images/footer_background.png);
+  background-position: center;
   .wrapper {
     display: flex;
     justify-content: space-between;

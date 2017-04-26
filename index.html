@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Demo site</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Playfair+Display:400,700,900|Roboto:300,400,700,900" rel="stylesheet">
@@ -11,16 +12,20 @@
 <body>
   <header>
     <div class="wrapper">
-      <div class="logo"></div>
-      <ul class="menu">
-        <li>Home</li>
-        <li>About</li>
-        <li>Experience</li>
-        <li>Teams</li>
-        <li>Works</li>
-        <li>People say</li>
-        <li>Contact</li>
-      </ul>
+      <h1 class="logo">
+        <img src="./images/logo.png" alt="logo"/>
+      </h1>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Experience</li>
+          <li>Teams</li>
+          <li>Works</li>
+          <li>People say</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
       <div class="content_center">
         <h1>We are awesome Creative agency</h1>
         <div class="separator"></div>
@@ -162,11 +167,11 @@
   <div class="contact">
     <div class="wrapper">
       <form>
-        <p>Give us a good news</p>
-        <input type="text" name="firstname" placeholder="Name"><br><br>
-        <input type="email" name="email" placeholder="Email"><br><br>
-        <input type="text" name="subject" placeholder="Subject"><br><br>
-        <textarea name="message" placeholder="Your Message"></textarea><br><br>
+        <p>Contact with us</p>
+        <input type="text" name="name" id="name" placeholder="Name"><br><br>
+        <input type="email" name="email" id="email" placeholder="Email"><br><br>
+        <input type="text" name="subject" id="subject" placeholder="Subject"><br><br>
+        <textarea name="message" id="message" placeholder="Your Message"></textarea><br><br>
         <button type="submit" name="button">Submit</button>
       </form>
       <div class="clients">

@@ -7,23 +7,21 @@ box-sizing: border-box;
 
 
 
-$green-color: rgb(0, 224, 208);
-$roboto-font: 'Roboto', sans-serif;
-$playfair-font: 'Playfair Display', serif;
-$hammersmith-font: 'Hammersmith One', sans-serif;
+$main-color: rgb(0, 224, 208);
+$main-text-color: rgb(255, 255, 255);
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Playfair Display', serif;
+$tertiary-font: 'Hammersmith One', sans-serif;
 
 @mixin btn {
   width: 120px;
   height: 40px;
   background: transparent;
-  border: 1px solid $green-color;
+  border: 1px solid $main-color;
   border-radius: 1px;
-  color: $green-color;
+  color: $main-color;
   text-transform: uppercase;
-  font: 16px $hammersmith-font;
-  &:focus {
-    outline: 0;
-  }
+  font: 1rem $tertiary-font;
 }
 
 @mixin separator {
@@ -42,12 +40,12 @@ $hammersmith-font: 'Hammersmith One', sans-serif;
     margin-top: 40px;
   }
   span {
-    font: 900 14px $roboto-font;
+    font: 900 14px $primary-font;
     text-transform: uppercase;
     padding-top: 25px;
   }
   p {
-    font: 300 14px $roboto-font;
+    font: 300 14px $primary-font;
     padding: 20px 27px 0 27px;
     line-height: 1.5;
   }
@@ -72,23 +70,24 @@ header {
   width: 100%;
   background-image: url(../images/background.png);
   background-size: cover;
-
   .logo {
-    background-image: url(../images/logo.png);
-    background-repeat: no-repeat;
-    width: 128px;
-    height: 50px;
-    float: left;
-    margin-top: 15px;
+    display: inline-block;
+    img {
+      padding-top: 15px;
+    }
   }
-  .menu {
+
+  nav {
+    float: right;
+  }
+  ul {
     float: right;
     list-style: none;
     li {
       float: left;
       padding: 36px 0 0 30px;
       text-transform: uppercase;
-      color: white;
+      color: $main-text-color;
       font-size: 13px;
       font-weight: 900;
     }
@@ -105,22 +104,22 @@ header {
     display: inline-block;
     width: 100%;
     text-align: center;
-    color: white;
+    color: $main-text-color;
     text-transform: capitalize;
     margin-top: 150px;
-    font-family: $playfair-font;
+    font-family: $secondary-font;
     font-size: 32px;
   }
   .separator {
     @include separator;
-    background-color: $green-color;
+    background-color: $main-color;
   }
   p {
-    color: white;
+    color: $main-text-color;
     text-align: center;
     margin-top: 15px;
     line-height: 2;
-    font-family: $roboto-font;
+    font-family: $primary-font;
     font-size: 14px;
   }
   .button_1 {
@@ -144,11 +143,11 @@ header {
   float: right;
   margin: 70px 0 70px 0;
   h2 {
-    font: bold 22px $playfair-font;
+    font: bold 22px $secondary-font;
     text-transform: uppercase;
   }
   p {
-    font: 400 14px $roboto-font;
+    font: 400 14px $primary-font;
     line-height: 1.5;
     padding-top: 15px;
   }
@@ -171,7 +170,7 @@ header {
   .play_icon {
     width: 100px;
     height: 100px;
-    border: 2px solid white;
+    border: 2px solid $main-text-color;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -180,13 +179,13 @@ header {
       height: 0;
       border-style: solid;
       border-width: 25px 0 25px 43px;
-      border-color: transparent transparent transparent white;
+      border-color: transparent transparent transparent $main-text-color;
       margin-left: 7px;
     }
   }
   p {
-    font: 900 16px $roboto-font;
-    color: white;
+    font: 900 16px $primary-font;
+    color: $main-text-color;
     text-transform: uppercase;
     margin-top: 30px;
   }
@@ -197,12 +196,12 @@ header {
   h2 {
     text-align: center;
     padding-top: 30px;
-    font: bold 22px $playfair-font;
+    font: bold 22px $secondary-font;
     text-transform: uppercase;
   }
   p {
     text-align: center;
-    font: 14px $playfair-font;
+    font: 14px $secondary-font;
     padding-top: 5px;
   }
   .separator {
@@ -249,16 +248,16 @@ header {
   background-image: url(../images/team_background.png);
   background-position: center;
   span {
-    font: bold 22px $playfair-font;
+    font: bold 22px $secondary-font;
     text-transform: uppercase;
-    color: white;
+    color: $main-text-color;
     padding-top: 50px;
     text-align: center;
     display: inline-block;
     width: 100%;
   }
   p {
-    font: 400 14px $playfair-font;
+    font: 400 14px $secondary-font;
     color: rgba(250, 250, 250, 0.7);
     padding-top: 5px;
     text-align: center;
@@ -283,10 +282,10 @@ header {
   span {
     padding: 0;
     margin-top: 10px;
-    font: 900 14px $roboto-font;
+    font: 900 14px $primary-font;
   }
   p {
-    font: 300 13px $roboto-font;
+    font: 300 13px $primary-font;
     color: rgba(250, 250, 250, 0.7);
     text-transform: uppercase;
   }
@@ -294,7 +293,7 @@ header {
 
 #another_par {
   margin-top: 60px;
-  font: 300 14px $roboto-font;
+  font: 300 14px $primary-font;
 } //dopracować
 .button_3 {
   @include btn;
@@ -308,14 +307,14 @@ header {
     float: left;
     text-transform: uppercase;
     margin: 50px 0 50px 0;
-    font: 700 22px $playfair-font;
+    font: 700 22px $secondary-font;
     color:  rgba(65, 61, 75, 0.5);
   }
   span {
     display: inline-block;
     float: right;
     margin: 55px 0 50px 0;
-    font: 300 14px $roboto-font;
+    font: 300 14px $primary-font;
     color:  rgba(65, 61, 75, 0.5);
   }
 }
@@ -340,14 +339,14 @@ header {
   background-image: url(../images/feedback_background.png);
   background-position: center;
   span {
-    font: 400 100px $playfair-font;
+    font: 400 100px $secondary-font;
     display: inline-block;
     width: 100%;
     text-align: center;
     color: rgba(255, 255, 255, 0.9);
   }
   p {
-    font: 400 16px $playfair-font;
+    font: 400 16px $secondary-font;
     text-align: center;
     line-height: 26px;
     color: rgba(255, 255, 255, 0.85);
@@ -357,12 +356,12 @@ header {
 .autor {
   margin-top: 30px;
   p{
-    font: 900 14px $roboto-font;
+    font: 900 14px $primary-font;
     text-transform: uppercase;
     line-height: 22px;
   }
   span{
-    font: 300 13px $roboto-font;
+    font: 300 13px $primary-font;
     text-transform: uppercase;
     line-height: 22px;
   }
@@ -378,7 +377,7 @@ form {
   margin-top: 30px;
   float: left;
   p {
-    font: 700 22px $playfair-font;
+    font: 700 22px $secondary-font;
     text-transform: uppercase;
     color: rgb(65, 61, 75);
     padding-bottom: 30px;
@@ -388,7 +387,7 @@ form {
     height: 40px;
     border: 1px solid lightgrey;
     padding-left: 10px;
-    font: 300 14px $roboto-font;
+    font: 300 14px $primary-font;
     outline: none;
     &:focus {
       background-color: rgba(243, 243, 243, .5);
@@ -400,7 +399,7 @@ form {
     height: 280px;
     border: 1px solid lightgrey;
     padding: 10px 0 0 10px;
-    font: 300 14px $roboto-font;
+    font: 300 14px $primary-font;
     outline: none;
     &:focus {
       background-color: rgba(243, 243, 243, .5);
@@ -416,7 +415,7 @@ form {
   height: 610px;
   float: left;
   p {
-    font: 700 22px $playfair-font;
+    font: 700 22px $secondary-font;
     text-transform: uppercase;
     color: rgb(65, 61, 75);
     margin-top: 30px;
@@ -501,8 +500,8 @@ footer {
     margin-top: 60px;
   }
   p {
-    font: 300 14px $roboto-font;
-    color: white;
+    font: 300 14px $primary-font;
+    color: $main-text-color;
     line-height: 24px;
     margin-top: 15px;
     padding-left: 10px;
@@ -511,8 +510,8 @@ footer {
 
 .footer_second_col {
   p {
-    font: 900 15px $roboto-font;
-    color: white;
+    font: 900 15px $primary-font;
+    color: $main-text-color;
     text-transform: uppercase;
     margin-top: 85px;
   }
@@ -527,16 +526,16 @@ footer {
     float: left;
     margin-top: 15px;
     padding-left: 15px;
-    font: 300 14px $roboto-font;
-    color: white;
+    font: 300 14px $primary-font;
+    color: $main-text-color;
     line-height: 26px;
   }
 }
 
 .footer_third_col {
   p {
-    font: 900 15px $roboto-font;
-    color: white;
+    font: 900 15px $primary-font;
+    color: $main-text-color;
     text-transform: uppercase;
     margin-top: 85px;
   }
@@ -549,7 +548,7 @@ footer {
     width: 70%;
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    font: 300 14px $roboto-font;
+    font: 300 14px $primary-font;
     color: rgba(255, 255, 255, 0.75);
     outline: none;
     &:focus {
@@ -579,17 +578,17 @@ footer {
 
 
 .footer_menu {
-  color: white;
+  color: $main-text-color;
   padding-top: 65px;
   li {
     float: left;
     padding-left: 30px;
     list-style: none;
     text-transform: uppercase;
-    font: 400 14px $roboto-font;
+    font: 400 14px $primary-font;
   }
   p {
     float: right;
-    font: 400 14px $roboto-font;
+    font: 400 14px $primary-font;
   }
 }

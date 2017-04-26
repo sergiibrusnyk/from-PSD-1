@@ -326,6 +326,7 @@ header {
     }
 }
 
+
 .works {
   display: flex;
   flex-wrap: wrap;
@@ -335,9 +336,38 @@ header {
   .sample {
     height: 180px;
     width: 30%;
-    border: 1px solid grey;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    .image {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      transition: .5s ease;
+      backface-visibility: hidden;
+      &:hover {
+        opacity: 0.3;
+      }
+      .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        &:hover {
+          opacity: 1;
+          }
+        }
+      }
     }
   }
+}
+.text p {
+  background-color: $main-color;
+  color: $main-text-color;
+  font: 300 20px $primary-font;
+  margin-top: -50px;
 }
 
 .feedbacks {

@@ -66,8 +66,7 @@ $tertiary-font: 'Hammersmith One', sans-serif;
 }
 
 header {
-  height: 100vh;
-  width: 100%;
+  height: 670px;
   background-image: url(../images/background.png);
   background-size: cover;
   .logo {
@@ -81,34 +80,26 @@ header {
     float: right;
   }
   ul {
-    float: right;
     list-style: none;
     li {
       float: left;
       padding: 36px 0 0 30px;
       text-transform: uppercase;
       color: $main-text-color;
-      font-size: 13px;
-      font-weight: 900;
+      font: 900 13px $primary-font;
     }
   }
 }
 
 .content_center {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   h1 {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
     color: $main-text-color;
     text-transform: capitalize;
     margin-top: 150px;
-    font-family: $secondary-font;
-    font-size: 32px;
+    font: 700 32px $secondary-font;
   }
   .separator {
     @include separator;
@@ -132,14 +123,12 @@ header {
   width: 235px;
   height: 229px;
   background-image: url(../images/left.png);
-  display: inline-block;
   float: left;
   margin: 70px 0 0 50px;
 }
 
 .our_story_content {
-  display: inline-block;
-  width: 538px;
+  width: 530px;
   float: right;
   margin: 70px 0 70px 0;
   h2 {
@@ -161,7 +150,6 @@ header {
   height: 550px;
   width: 100%;
   background-image: url(../images/video_img.png);
-  display: inline-block;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -196,7 +184,7 @@ header {
   h2 {
     text-align: center;
     padding-top: 30px;
-    font: bold 22px $secondary-font;
+    font: 700 22px $secondary-font;
     text-transform: uppercase;
   }
   p {
@@ -244,11 +232,11 @@ header {
 }
 
 .team {
-  height: 100vh;
+  height: 712px;
   background-image: url(../images/team_background.png);
   background-position: center;
   span {
-    font: bold 22px $secondary-font;
+    font: 700 22px $secondary-font;
     text-transform: uppercase;
     color: $main-text-color;
     padding-top: 50px;
@@ -277,7 +265,7 @@ header {
   .member {
     width: 220px;
     height: 300px;
-    border: 1px solid rgba(231, 231, 231, 0.5);
+    border: 1px solid rgba(231, 231, 231, 0.2);
   }
   span {
     padding: 0;
@@ -372,7 +360,6 @@ header {
 }
 
 form {
-  display: inline-block;
   width: 50%;
   margin-top: 30px;
   float: left;
@@ -388,7 +375,7 @@ form {
     border: 1px solid lightgrey;
     padding-left: 10px;
     font: 300 14px $primary-font;
-    outline: none;
+    //outline: none;
     &:focus {
       background-color: rgba(243, 243, 243, .5);
     }
@@ -400,7 +387,7 @@ form {
     border: 1px solid lightgrey;
     padding: 10px 0 0 10px;
     font: 300 14px $primary-font;
-    outline: none;
+    //outline: none;
     &:focus {
       background-color: rgba(243, 243, 243, .5);
     }
@@ -412,7 +399,6 @@ form {
 
 .clients {
   width: 50%;
-  height: 610px;
   float: left;
   p {
     font: 700 22px $secondary-font;
@@ -475,20 +461,15 @@ footer {
   }
   .footer_first_col {
     width: 30%;
-    height: 250px;
   }
   .footer_second_col {
     width: 30%;
-    height: 250px;
   }
   .footer_third_col {
     width: 30%;
-    height: 250px;
   }
   .footer_menu {
     width: 100%;
-    height: 150px;
-    display: inline-block;
   }
 }
 
@@ -540,23 +521,20 @@ footer {
     margin-top: 85px;
   }
   input {
-    display: inline-block;
-    float: left;
     margin-top: 30px;
     padding-left: 10px;
     height: 40px;
     width: 70%;
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.30);
     font: 300 14px $primary-font;
     color: rgba(255, 255, 255, 0.75);
-    outline: none;
+    //outline: none;
     &:focus {
       background-color: rgba(243, 243, 243, .5);
     }
   }
   button {
-    display: inline-block;
     float: right;
     width: 70px;
     height: 40px;
@@ -566,12 +544,8 @@ footer {
     background-image: url(../images/paper.png);
     background-repeat: no-repeat;
     background-position: center;
-    &:focus {
-      outline: 0;
-    }
   }
   .social_media {
-    display: inline-block;
     margin-top: 25px;
   }
 }

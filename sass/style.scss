@@ -22,6 +22,15 @@ $tertiary-font: 'Hammersmith One', sans-serif;
   color: $main-color;
   text-transform: uppercase;
   font: 1rem $tertiary-font;
+  &:focus{
+    outline: 1px solid rgba(0, 224, 208, 0.0);
+  }
+  &:hover{
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+    transition-duration: 1s;
+    background-color: rgba(0, 224, 208, 0.4);
+  }
 }
 
 @mixin separator {
@@ -39,7 +48,7 @@ $tertiary-font: 'Hammersmith One', sans-serif;
   img {
     margin-top: 40px;
   }
-  span {
+  h3 {
     font: 900 14px $primary-font;
     text-transform: uppercase;
     padding-top: 25px;
@@ -95,7 +104,7 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  h1 {
+  h2 {
     color: $main-text-color;
     text-transform: capitalize;
     margin-top: 150px;
@@ -143,6 +152,9 @@ header {
   .button_2 {
     @include btn;
     margin-top: 20px;
+    &:hover{
+      background-color: rgba(51, 41, 93, 0.4);
+    }
   }
 }
 
@@ -235,14 +247,12 @@ header {
   height: 712px;
   background-image: url(../images/team_background.png);
   background-position: center;
-  span {
+  h4 {
     font: 700 22px $secondary-font;
     text-transform: uppercase;
     color: $main-text-color;
     padding-top: 50px;
     text-align: center;
-    display: inline-block;
-    width: 100%;
   }
   p {
     font: 400 14px $secondary-font;
@@ -266,16 +276,18 @@ header {
     width: 220px;
     height: 300px;
     border: 1px solid rgba(231, 231, 231, 0.2);
-  }
-  span {
-    padding: 0;
-    margin-top: 10px;
-    font: 900 14px $primary-font;
-  }
-  p {
-    font: 300 13px $primary-font;
-    color: rgba(250, 250, 250, 0.7);
-    text-transform: uppercase;
+    h5 {
+      padding: 0;
+      margin-top: 10px;
+      font: 900 14px $primary-font;
+      color: $main-text-color;
+      text-align: center;
+      text-transform: uppercase;
+      p {
+        font: 300 13px $primary-font;
+        color: rgba(250, 250, 250, 0.7);
+      }
+    }
   }
 }
 
@@ -290,35 +302,41 @@ header {
 }
 
 .portfolio {
-  display: flex;
-  p {
+  h6 {
     float: left;
     text-transform: uppercase;
+    padding-left: 15px;
     margin: 50px 0 50px 0;
     font: 700 22px $secondary-font;
     color:  rgba(65, 61, 75, 0.5);
   }
-  span {
-    display: inline-block;
+  p {
     float: right;
     margin: 55px 0 50px 0;
+    padding-right: 15px;
     font: 300 14px $primary-font;
     color:  rgba(65, 61, 75, 0.5);
   }
+  .button_4 {
+    @include btn;
+    width: 150px;
+    margin: 30px 0 50px 395px;
+    &:hover{
+      background-color: rgba(51, 41, 93, 0.4);
+    }
 }
 
 .works {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 400px;
   .sample {
-    height: 160px;
-    width: 16.66%;
+    height: 180px;
+    width: 30%;
     border: 1px solid grey;
-  }
-  .button_4 {
-    @include btn;
-    width: 150px;
-    margin: 50px 0 50px 545px;
+    }
   }
 }
 
@@ -375,9 +393,10 @@ form {
     border: 1px solid lightgrey;
     padding-left: 10px;
     font: 300 14px $primary-font;
-    //outline: none;
+
     &:focus {
       background-color: rgba(243, 243, 243, .5);
+      outline: 1px solid rgba(243, 243, 243, .5);
     }
   }
   textarea {
@@ -387,13 +406,16 @@ form {
     border: 1px solid lightgrey;
     padding: 10px 0 0 10px;
     font: 300 14px $primary-font;
-    //outline: none;
     &:focus {
       background-color: rgba(243, 243, 243, .5);
+      outline: 1px solid rgba(243, 243, 243, .5);
     }
   }
   button {
     @include btn;
+    &:hover{
+      background-color: rgba(51, 41, 93, 0.4);
+    }
   }
 }
 
